@@ -1,7 +1,7 @@
 package com.senor.book.springboot.web;
 
-import com.senor.book.springboot.posts.Posts;
-import com.senor.book.springboot.posts.PostsRepository;
+import com.senor.book.springboot.domain.posts.Posts;
+import com.senor.book.springboot.domain.posts.PostsRepository;
 import com.senor.book.springboot.web.dto.PostsSaveRequestDto;
 import com.senor.book.springboot.web.dto.PostsUpdateRequestDto;
 import org.junit.After;

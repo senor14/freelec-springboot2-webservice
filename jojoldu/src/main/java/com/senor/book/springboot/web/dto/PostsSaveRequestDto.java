@@ -1,6 +1,6 @@
 package com.senor.book.springboot.web.dto;
 
-import com.senor.book.springboot.posts.Posts;
+import com.senor.book.springboot.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
