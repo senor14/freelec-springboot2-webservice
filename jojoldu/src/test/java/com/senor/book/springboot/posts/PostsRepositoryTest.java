@@ -3,8 +3,9 @@ package com.senor.book.springboot.posts;
 import com.senor.book.springboot.domain.posts.Posts;
 import com.senor.book.springboot.domain.posts.PostsRepository;
 import org.junit.After;
+import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-class PostsRepositoryTest {
+public class PostsRepositoryTest {
 
     @Autowired
     PostsRepository postsRepository;
@@ -28,8 +29,8 @@ class PostsRepositoryTest {
     }
 
     @Test
-    @DisplayName("게시글저장 불러오기")
-    void postSaveAndLoad() {
+//    @DisplayName("게시글저장 불러오기")
+    public void 게시글저장_불러오기() {
         //given
         String title = "테스트 게시글";
         String content = "테스트 본문";
@@ -51,8 +52,8 @@ class PostsRepositoryTest {
     }
 
     @Test
-    @DisplayName("BaseTimeEntity 등록")
-    void BaseTimeEntity_register() {
+//    @DisplayName("BaseTimeEntity 등록")
+    public void BaseTimeEntity_등록() {
         //given
         LocalDateTime now = LocalDateTime.of(2019, 6, 4, 0, 0, 0);
         postsRepository.save(Posts.builder()

@@ -1,5 +1,6 @@
 package com.senor.book.springboot.web;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +20,13 @@ class IndexControllerTest {
     private TestRestTemplate restTemplate;
 
     @Test
+    @DisplayName("메인 페이지 로딩")
     void main_page_loading() {
         //when
         String body = this.restTemplate.getForObject("/", String.class);
 
         //then
-        assertThat(body).contains("스프링 부트로 시작하는 웹 서비스ㅇ");
+        assertThat(body).contains("스프링부트로 시작하는 웹 서비스");
     }
 
 }
